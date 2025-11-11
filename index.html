@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="ATOXICATION ALIMENTAIRE — site humoristique sur les plats toxiques. Design rétro / glitch.">
   <title>🍔 ATOXICATION ALIMENTAIRE 🍔</title>
-  <link rel="icon" href="data:,">
   <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -13,7 +11,6 @@
       --vomit-yellow: #ccff00;
       --blood-red: #d00000;
       --mold-purple: #7209b7;
-      --bg: #0b0b0b;
     }
 
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -24,7 +21,6 @@
       font-family: 'Roboto', sans-serif;
       overflow-x: hidden;
       min-height: 100vh;
-      line-height:1.4;
     }
 
     .header {
@@ -33,8 +29,8 @@
       right: 10px;
       z-index: 999;
       font-size: 1.2rem;
-      background: rgba(0,0,0,0.8);
-      padding: 6px 10px;
+      background: #000;
+      padding: 5px 10px;
       border: 2px solid var(--toxic-green);
       border-radius: 8px;
       box-shadow: 0 0 15px var(--toxic-green);
@@ -44,8 +40,8 @@
       background: none;
       border: none;
       color: var(--vomit-yellow);
-      font-size: 1.2rem;
-      margin: 0 4px;
+      font-size: 1.3rem;
+      margin: 0 5px;
       cursor: pointer;
       text-shadow: 0 0 5px var(--toxic-green);
     }
@@ -54,8 +50,8 @@
       position: fixed;
       top: 0; left: 0;
       width: 100%;
-      background: rgba(0,0,0,0.92);
-      padding: 12px 0;
+      background: rgba(0,0,0,0.9);
+      padding: 15px 0;
       text-align: center;
       border-bottom: 3px dashed var(--toxic-green);
       z-index: 998;
@@ -70,9 +66,9 @@
     .menu a {
       color: var(--vomit-yellow);
       text-decoration: none;
-      margin: 0 18px;
+      margin: 0 20px;
       font-family: 'Press Start 2P', cursive;
-      font-size: 0.95rem;
+      font-size: 1rem;
       text-transform: uppercase;
       position: relative;
     }
@@ -92,15 +88,15 @@
       100% { transform: scale(1); }
     }
 
-    main.container {
+    .container {
       max-width: 900px;
-      margin: 140px auto 50px;
-      padding: 36px;
+      margin: 120px auto 50px;
+      padding: 40px;
       background: rgba(20,20,20,0.95);
       border: 3px solid var(--toxic-green);
-      border-radius: 12px;
+      border-radius: 15px;
       text-align: center;
-      box-shadow: 0 0 30px rgba(57,255,20,0.45);
+      box-shadow: 0 0 30px rgba(57,255,20,0.5);
       position: relative;
       overflow: hidden;
     }
@@ -112,16 +108,16 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 2rem;
-      opacity: 0.15;
+      opacity: 0.2;
       animation: float 6s infinite;
     }
 
     h1 {
       font-family: 'Creepster', cursive;
-      font-size: 4rem;
+      font-size: 4.5rem;
       color: var(--blood-red);
       text-shadow: 4px 4px 0px var(--toxic-green);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       animation: shake 0.5s infinite;
     }
 
@@ -132,98 +128,96 @@
     }
 
     .subtitle {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: var(--mold-purple);
-      margin: 14px 0;
+      margin: 20px 0;
       font-weight: bold;
     }
 
     .btn {
       display: inline-block;
-      margin: 14px 8px;
-      padding: 12px 22px;
+      margin: 20px 10px;
+      padding: 15px 30px;
       background: var(--toxic-green);
       color: #000;
       font-family: 'Press Start 2P', cursive;
       text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 0 18px var(--toxic-green);
-      transition: all 0.22s;
-      font-size: 0.95rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px var(--toxic-green);
+      transition: all 0.3s;
+      font-size: 1rem;
     }
 
     .btn:hover {
-      transform: scale(1.06) rotate(1.5deg);
-      box-shadow: 0 0 34px var(--vomit-yellow);
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 0 40px var(--vomit-yellow);
       background: var(--vomit-yellow);
       color: #000;
     }
 
     .warning {
-      font-size: 1.05rem;
-      color: #ff4466;
-      margin: 22px 0;
+      font-size: 1.2rem;
+      color: #ff0066;
+      margin: 30px 0;
       font-style: italic;
     }
 
     footer {
       text-align: center;
-      padding: 26px;
-      color: #999;
+      padding: 30px;
+      color: #666;
       font-size: 0.9rem;
     }
 
     @keyframes float {
       0%,100% { transform: translateY(0) translateX(-50%); }
-      50% { transform: translateY(-12px) translateX(-50%); }
-    }
-
-    /* petites améliorations responsive */
-    @media (max-width:600px) {
-      h1 { font-size: 2.4rem; }
-      .menu a { margin: 0 10px; font-size:0.85rem; }
-      .container { margin: 120px 12px; padding:20px; }
+      50% { transform: translateY(-15px) translateX(-50%); }
     }
   </style>
 </head>
 <body>
 
-  <div class="header" aria-hidden="false">
-    <button aria-label="Minimiser" onclick="alert('💀 Minimisé dans ton vomi')">−</button>
-    <button aria-label="Plein écran" onclick="alert('🟢 Plein écran de toxines !')">🗕</button>
-    <button aria-label="Fermer" onclick="if(confirm('🚪 Tu fuis déjà ?')) location.href='https://google.com'">✕</button>
+  <!-- Boutons en haut à droite -->
+  <div class="header">
+    <button onclick="window.minimize()">−</button>
+    <button onclick="window.maximize()">🗕</button>
+    <button onclick="window.close()">✕</button>
   </div>
 
-  <nav class="menu" role="navigation" aria-label="Menu principal">
+  <!-- Menu chelou -->
+  <nav class="menu">
     <a href="#burger">Burger Pourri</a>
     <a href="#pizza">Pizza Radioactif</a>
     <a href="#kebab">Kebab Mutant</a>
     <a href="#sushi">Sushi Vivant</a>
   </nav>
 
-  <main class="container" role="main">
+  <!-- Contenu principal -->
+  <div class="container">
     <h1>ATOXICATION ALIMENTAIRE</h1>
     <p class="subtitle">🍔 Bienvenue sur <strong>https://atoxication-alimentaire.com</strong> 🍔</p>
     <p>Ici, tu vas choper une <strong>ATOXICATION</strong> bien gratos 😈</p>
 
     <div class="warning">⚠️ Risque élevé de vomir en 4K ⚠️</div>
 
-    <a href="#burger" class="btn" role="button">🍔 Manger le Burger</a>
-    <a href="#pizza" class="btn" role="button">🍕 Go la Pizza</a>
-    <a href="#kebab" class="btn" role="button">🌯 Kebab Toxique</a>
+    <a href="#burger" class="btn">🍔 Manger le Burger</a>
+    <a href="#pizza" class="btn">🍕 Go la Pizza</a>
+    <a href="#kebab" class="btn">🌯 Kebab Toxique</a>
 
-    <p style="margin-top:22px; font-size:1.05rem; color:#ddd;">
+    <p style="margin-top:30px; font-size:1.1rem;">
       <em>Burger moisi • Fromage qui couine • Sauce suspecte • Pain radioactif</em>
     </p>
-  </main>
+  </div>
 
   <footer>
     © 2025 Atoxication Alimentaire™ | Tous droits réservés (sauf ton estomac)
   </footer>
 
   <script>
-    // Aucun comportement bloquant : juste du fun
-    // Si vous voulez des interactions réelles, on peut ajouter un petit script JS.
+    // Faux boutons (pour le style)
+    window.minimize = () => alert("💀 Minimisé dans ton vomi");
+    window.maximize = () => alert("🟢 Plein écran de toxines !");
+    window.close = () => confirm("🚪 Tu fuis déjà ?") && window.location.href = "https://google.com";
   </script>
 </body>
 </html>
